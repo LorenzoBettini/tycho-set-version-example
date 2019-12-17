@@ -193,5 +193,42 @@
         </plugins>
       </build>
     </profile>
+    <profile>
+      <id>update-versions2</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>versions-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>remove-snapshot</id>
+                <phase>validate</phase>
+                <goals>
+                  <goal>set</goal>
+                </goals>
+                <configuration>
+                  <generateBackupPoms>false</generateBackupPoms>
+                  <removeSnapshot>true</removeSnapshot>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-versions-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>update-eclipse-metadata</id>
+                <phase>validate</phase>
+                <goals>
+                  <goal>update-eclipse-metadata</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 </project>
