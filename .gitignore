@@ -1,0 +1,20 @@
+.DS_Store
+*.class
+bin/
+*~
+logs.zip
+*.orig
+*.java._trace
+*.smap
+
+# we handle separately in the projects
+# src-gen/
+
+xtend-gen/
+emf-gen/
+
+buildroot
+
+target
+#generated
+generated-sources
