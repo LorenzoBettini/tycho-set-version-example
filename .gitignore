@@ -18,3 +18,5 @@ buildroot
 target
 #generated
 generated-sources
+
+pom.xml.versionsBackup
