@@ -1,2 +1,5 @@
 mvn build-helper:parse-version org.eclipse.tycho:tycho-versions-plugin:set-version \
      -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion}
+
+mvn versions:set -DgenerateBackupPoms=false -DremoveSnapshot=true \
+     org.eclipse.tycho:tycho-versions-plugin:update-eclipse-metadata
