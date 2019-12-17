@@ -176,7 +176,7 @@
           </plugin>
           <plugin>
             <groupId>org.eclipse.tycho</groupId>
-            <artifactId>tycho-versions</artifactId>
+            <artifactId>tycho-versions-plugin</artifactId>
             <executions>
               <execution>
                 <id>set-version</id>
